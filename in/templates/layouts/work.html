@@ -1,0 +1,14 @@
+---
+layout: content.html
+---
+<header>
+  <h1 class="title">{{title}}</h1>
+  {{partial "subtitle"}}
+</header>
+{{>body}}
+<ul>
+  <h5>tags</h5>
+  {{#page.tags}}
+  <li><a href="{{url}}">{{.}}</a></li>
+  {{/page.tags}}
+</ul>

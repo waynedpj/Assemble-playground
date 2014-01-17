@@ -1,0 +1,15 @@
+---
+layout: work.html
+---
+<section class="container tracks" id="{{slugify title}}-tracks">
+  <h4 class="text">tracks</h4>
+  <ol>
+    <!-- can pull tracks from current directory of file being processed? -->
+    {{#compose src="tracks/**/*.html"}}
+    <li class="track" id="track-{{slugify @title}}" title="{{@title}}">
+      <a href="{{slugify @title}}">{{@title}}</a>
+    </li>
+    {{/compose}}
+  </ol>
+</section>
+{{>body}}

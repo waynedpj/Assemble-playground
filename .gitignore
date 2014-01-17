@@ -1,0 +1,46 @@
+####
+# installed deps?
+# check in .. see http://addyosmani.com/blog/checking-in-front-end-dependencies/
+####
+node_modules
+lib/node_modules
+lib/bower_components
+test/bower_components
+
+####
+# output
+####
+out
+stage
+
+
+####
+# temporaneo
+####
+.tmp
+.sass-cache
+tmp
+temp
+
+
+####
+# backup
+####
+*~
+
+
+####
+# other
+####
+old
+other
+archive
+stuff
+
+
+####
+# media
+####
+#images
+#audio
+#video

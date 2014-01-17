@@ -1,0 +1,50 @@
+---
+
+---
+<!doctype html>
+{{partial "ie"}}
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+
+    <title>{{page.title}} | {{site.title}}</title>
+
+    {{#site.creators}}
+      <meta name="author" content="{{name}}"/>
+      {{#website}}
+        <link rel="author" href="{{this}}"/>
+      {{/website}}
+    {{/site.creators}}
+
+    <meta name="description" content="{{description}}"/>
+
+    {{#license}}
+      <link rel="license" href="{{URL}}"/>
+    {{/license}}
+
+    <!-- mobile viewport optimisation -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- links -->
+    <link rel="prev" href=""/>
+    <link rel="next" href=""/>
+    <link rel="help" href=""/>
+    <link rel="search" href=""/>
+    <link rel="alternate" type="application/rss+xml" title="in-giro" href="http://in-giro.org/feed"/>
+
+    <!-- styles -->
+    <!-- load core CSS styles -->
+
+    <!-- load any layout specific stylesheets -->
+
+    <!-- load any page specific stylesheets -->
+
+
+    {{partial "noscript"}}
+
+  </head>
+  <body class="page container" id="{{slugify title}}">
+    {{>body}}
+  </body>
+</html>

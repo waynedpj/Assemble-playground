@@ -1,0 +1,29 @@
+---
+layout: page.html
+
+SN: <%= site.name %>
+---
+Handlebars context<br/>
+{{log "logging dirname = "}}{{log dirname}}
+title = {{title}}<br/>
+dirname = {{dirname}}<br/>
+<br/>
+<br/>
+
+LoDash context<br/>
+{{log "logging dirname = "}}{{log fromLoDash.dirname}}
+title = {{fromLoDash.title}}<br/>
+dirname = {{fromLoDash.dirname}}<br/>
+
+{{log "logging SN = "}}{{log SN}}
+SN = {{SN}}
+
+<header class="root container" id="{{slugify site.name}}-header">
+  
+</header>
+<main class="root container content" id="{{slugify title}}-main-content">
+  {{>body}}
+</main>
+<footer class="root container" id="{{slugify site.name}}-header">
+  
+</footer>
