@@ -106,7 +106,6 @@ module.exports = (grunt) ->
                             pattern: /:\b(title)\b/
                             replacement: (match) ->
                                 _str = require "underscore.string"
-                                grunt.verbose.ok "match = " + match
                                 _str.slugify match
                             ]
                 files: [
@@ -127,7 +126,10 @@ module.exports = (grunt) ->
                         structure: ":title/index.html"
                         patterns: [
                             pattern: ":title"
-                            replacement: "<%= dirname %>"
+                            replacement: (match) ->
+                                _str = require "underscore.string"
+                                grunt.verbose.ok "@releases match = " + match
+                                _str.slugify match
                             ]
                 files: [
                     expand: true # Enable dynamic expansion.
@@ -150,7 +152,7 @@ module.exports = (grunt) ->
                     expand: true # Enable dynamic expansion.
                     cwd: "<%= config.root %>/releases/" # Src matches are relative to this path.
                     src: ["*/tracks/**/*.html"] # Actual pattern(s) to match.
-                    dest: "<%= config.stage %>/" # Destination path prefix.
+                    dest: "<%= config.stage %>/release" # Destination path prefix.
                     ]
 
         # clean up generated sources in stage
